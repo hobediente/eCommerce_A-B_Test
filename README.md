@@ -1,7 +1,6 @@
-# eCommerce A/B Test
-# Music Segmentation Unsupervised Learning_Project
+# eCommerce A/B Testing Project
 
-Collect and cluster top 100 hits from different music genres.
+Run an A/B test to determine if there is a significant difference in purchases between shoppers who remove items from their cart and shoppers who do not remove items from their cart.
 
 Traditionally songs are grouped together with other songs on the basis of genre. While this method of grouping is useful for identifying different styles, there may be other valuable ways to group songs together. The aim of this study is to apply clustering algorithms to an assorment of songs across generes and explore cluster centers to determine if the the algorithms grouped songs together on the basis of genre, or in another way that is or is not of value. 
  
@@ -9,7 +8,7 @@ Traditionally songs are grouped together with other songs on the basis of genre.
 
 # DATA:
 
-The data for this project is sourced from Spotify
+The data for this project is sourced from Kaggle
 - Each playlist is created by Spotify, features the top 100 tracks for that genre, and is updated weekly
 
 1) Top 100 Pop Tracks on Spotify
