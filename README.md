@@ -2,6 +2,10 @@
 
 Run an A/B test to determine if there is a significant difference in purchases between shoppers who remove items from their cart and shoppers who do not remove items from their cart.
 
+As the online shopping community continues to grow it becomes increasingly important for marketers to understand consumer behavior in the online environment.
+
+People behave differently in different environments. Unlike when shoppers have carts the grociery store, adding an item to an online shopping cart never nesscitiates the shopper remove items they no longer wish to purchase, or reach the checkout line at all. As the online shopping community continues to grow it becomes increasingly important for marketers to understand consumer behavior in the online environment. 
+
 Traditionally songs are grouped together with other songs on the basis of genre. While this method of grouping is useful for identifying different styles, there may be other valuable ways to group songs together. The aim of this study is to apply clustering algorithms to an assorment of songs across generes and explore cluster centers to determine if the the algorithms grouped songs together on the basis of genre, or in another way that is or is not of value. 
  
 <img src="Images/Spotify Logo.jpg"></img>
