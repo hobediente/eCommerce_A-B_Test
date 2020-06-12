@@ -2,7 +2,7 @@
 
 Run an A/B test to determine if there is a significant difference in purchases between shoppers who remove items from their cart and shoppers who do not remove items from their cart.
 
-People behave differently in different environments. Unlike when shoppers have carts the grociery store, adding an item to an online shopping cart does not nesscitiate the shopper remove items they no longer wish to purchase, or reach the checkout line at all. As the online shopping community continues to grow it becomes increasingly important for marketers to understand consumer behavior in the online environment. This study aims to shed light on such behavior for an eCommerce cosmetics shop. 
+As the online shopping community continues to grow it becomes increasingly important for marketers to understand consumer behavior in the online environment. This study aims to shed light on such behavior for an eCommerce cosmetics shop so marketers can effectively incentivize shoppers to follow through with making purchases. 
 
  
 <img src="Images/cosmetics_banner.jpg"></img>
@@ -15,10 +15,10 @@ Events history for a eCommerce cosmetics shop
 - Over 4 million rows
 - from Kaggle (https://www.kaggle.com/mkechinov/ecommerce-events-history-in-cosmetics-shop)
 
-# Question:
-How do we tell when a person is considering making a purchase in an online environment?
-
 # Theory:
+There are two ways people reach decisions, with or without a significant amount of thought. Generally speaking, the more consequences a decision-maker perceives a decsion to have, the more they'll think about what decision to make. Unlike when shoppers have carts at the grociery store, adding items to online shopping carts never nesscitiates shoppers remove items they no longer wish to purchase, or reach the checkout line at all. In other words, relative to people shopping in a store, online shoppers are not as detered from adding products to their carts they have no intention to purchase, because doing so is a virtually inconsequential decision. With that in mind, how can online retial stores gage when online shoppers do intend to purchase what they add to cart? 
+
+I theorize one action that may signal a shopper is more seriously considering making a purchase is removing an item from their cart. By removing items shoppers indicate they are crtically assesing what they have in their cart, and again people generally think more about decisions that have consequences. Making a purchase is a consequential descision so my hypotheses are as follows.. 
 
 # Hypothesis:
 
