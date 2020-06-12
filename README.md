@@ -108,6 +108,7 @@ In this step I conduct an A/B test to evaluate the hypotheses.
   
 <img src="Images/Visual_Oct.png"></img>
       * Left: Out of all people who add items to their cart, the majority make a purchase
+      
       * Right: Out of all people who make purchase, the majority also remove items from their cart 
       
       
@@ -115,12 +116,14 @@ In this step I conduct an A/B test to evaluate the hypotheses.
   
 <img src="Images/Visual_Nov.png"></img>
       * Left: Out of all people who add items to their cart, the majority make a purchase
+      
       * Right: Out of all people who make purchase, the majority also remove items from their cart 
       
 - Median items removed from cart are different
 
 <img src="Images/Medians.png"></img>
       * The median amount of items shoppers who do not make a purchase remove from cart is 0
+      
       * The median amount of items shoppers who do make a purchase remove from cart is 5
 
 ### Conclusion: Reject the NULL hypothesis.
