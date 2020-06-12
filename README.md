@@ -15,6 +15,8 @@ Events history for a eCommerce cosmetics shop
 - Over 4 million rows
 - from Kaggle (https://www.kaggle.com/mkechinov/ecommerce-events-history-in-cosmetics-shop)
 
+<img src="Images/cosmetics_banner.jpg"></img>
+
 # Theory:
 There are two ways people reach decisions, with or without a significant amount of thought. Generally speaking, the more consequences a decision-maker perceives a decsion to have, the more they'll think about what decision to make. Unlike when shoppers have carts at the grociery store, adding items to online shopping carts never nesscitiates shoppers remove items they no longer wish to purchase, or reach the checkout line at all. In other words, relative to people shopping in a store, online shoppers are not as detered from adding products to their carts they have no intention to purchase, because doing so is a virtually inconsequential decision. With that in mind, how can online retial stores gage when online shoppers do intend to purchase what they add to cart? 
 
@@ -38,29 +40,111 @@ In this step I explore the shape of the data.
 # 3. A/B Test:
 In this step I conduct an A/B test to evaluate the hypotheses. 
 
+------------------------------------------------------------------------------------------------------------------------------
 
+# Data Preparation 
+
+**Step 1 : Pivot df**
+
+- Drop columns insignificant for A/B testing
+- Set all "price" values > 0 equal to 1 
+- Pivot table on "event_type", with "user_id" as the index, and the sum of "price" as the values
+
+<img src="Images/cosmetics_banner.jpg"></img>
+
+**Step 2 : Clean df**
+
+- Fill NaNs with 0
+- Reset index
+
+<img src="Images/cosmetics_banner.jpg"></img> 
+
+**Step 3 : Feature Engineering**
+
+- Add a column called "buy" and set values equal to "yes" if "purchase" is > 0, and "no" if "purchase" is = 0
+- Add a column called "remove" and set values equal to "yes" if "remove_from_cart" is > 0, and "no" if "remove_from_cart" is = 0
+ 
+ <img src="Images/df.png"></img>
+ 
+# Exploratory Analysis
+
+**Step 1 : Split the data**
+- split data into two groups
+  * df_pyes : purchase = yes
+  * df_pno : purchase = no
+
+
+**Step 2 : Check df_pyes Distributions**
+- Visually exmaine the distribution of "remove_from_cart" for October
+
+<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_Category.png"></img>
+
+### Conclusion: Does not visually appear to be normally distributed
+
+- Statisticaly exmaine the distribution of "remove_from_cart" for October
+
+<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_Category.png"></img>
+
+### Conclusion: Is not statistically normally distributed
+
+- Visually exmaine the distribution of "remove_from_cart" for November
+
+<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_Category.png"></img>
+
+### Conclusion: Does not visually appear to be normally distributed
+
+- Statisticaly exmaine the distribution of "remove_from_cart" for November
+
+<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_Category.png"></img>
+
+### Conclusion: American Vodkas account for nearly half of all sales
+
+**Step 3 : Check df_pno Distributions**
+- Visually exmaine the distribution of "remove_from_cart" for October
+
+<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_County.png"></img>
+
+### Conclusion: Does not visually appear to be normally distributed
+
+- Statistically exmaine the distribution of "remove_from_cart" for October  
+
+<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_County.png"></img>
+
+### Conclusion: Is not statistically normally distributed
+
+- Visually exmaine the distribution of "remove_from_cart" for November
+
+<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_County.png"></img>
+
+### Conclusion: Does not visually appear to be normally distributed
+
+- Statistically exmaine the distribution of "remove_from_cart" for November 
+
+<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_County.png"></img>
+
+### Conclusion: Is not statistically normally distributed
+
+
+# A/B Test
+- Data does not follow a Gaussian distribution -> run Kurskal-Wallace test
+- stats.kruskal(df_pyes['remove_from_cart'],df_pno['remove_from_cart'])
+  * October
+  * November
 
 # A/B Test Results :
 - Statistically different
+  * October : KruskalResult(statistic=31200.044339830914, pvalue=0.0)  
+  * November : KruskalResult(statistic=15076.78480470683, pvalue=0.0)
+  
 - Visually different
-- Reject the Null
 
 <img src="Images/clustering_by_genre.png" width="650" height="500"></img>
 
 <img src="Images/clustering_by_KMeans.png" width="650" height="500"></img>
 
 ### Conclusion: Removing items from a cart better indicate a purchase than adding items to a cart.
+### Conclusion: Reject the NULL hypothesis.
 
-- Numeric comparison
-
-<img src="Images/cluster_centers.png"></img>
-
-    * KMeans cluster 0: High energy, high danceability, high valence
-    * KMeans cluster 1: High energy, high danceability, low valence
-    * KMeans cluster 2: High instrumentalness
-    * KMeans cluster 3: Low liveness, low energy, high danceability
-   
-### Conclusion: Some clusters closely represent genres i.e. rock and cluster 0, while others do not seem to represent any one particular genre but songs with similar metrics within them.
 
 # Next Steps :
 - Design a pop-up that incentivizes people to follow through with a purchase/ buy more
