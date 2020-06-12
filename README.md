@@ -82,6 +82,8 @@ In this step I conduct an A/B test to evaluate the hypotheses.
 ### Conclusion: Do not visually appear to be normally distributed
 ### Conclusion: Are not statistically normally distributed
 
+
+
 **Step 3 : Check November Distributions**
 - Visually and statistically exmaine the distribution of "remove_from_cart" for November
 
@@ -103,9 +105,9 @@ In this step I conduct an A/B test to evaluate the hypotheses.
   
 - Visually different
 
-<img src="Images/Visual_Oct.png" width="650" height="500"></img>
+<img src="Images/Visual_Oct.png"></img>
 
-<img src="Images/Visual_Nov.png" width="650" height="500"></img>
+<img src="Images/Visual_Nov.png"></img>
 
 ### Conclusion: Removing items from a cart better indicate a purchase than adding items to a cart.
 ### Conclusion: Reject the NULL hypothesis.
