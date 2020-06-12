@@ -104,12 +104,15 @@ In this step I conduct an A/B test to evaluate the hypotheses.
   * November : KruskalResult(statistic=15076.78480470683, pvalue=0.0)
   
 - Visually different
-
+  * October
 <img src="Images/Visual_Oct.png"></img>
-
+      * Left: Out of all people who add items to their cart, the majority make a purchase
+      * Right: Out of all people who make purchase, the majority also remove items from their cart 
+  * November 
 <img src="Images/Visual_Nov.png"></img>
+      * Left: Out of all people who add items to their cart, the majority make a purchase
+      * Right: Out of all people who make purchase, the majority also remove items from their cart 
 
-### Conclusion: Removing items from a cart better indicate a purchase than adding items to a cart.
 ### Conclusion: Reject the NULL hypothesis.
 
 
